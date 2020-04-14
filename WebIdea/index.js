@@ -18,7 +18,6 @@ var all_caps, title_caps, no_caps;
 var capitalization = "capitalization";
 var corner_radius;
 
-var test;
 
 /*this is where the button is placed in html*/
 let container = document.querySelector('.col-md-9');
