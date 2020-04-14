@@ -11,7 +11,7 @@ var counter_pv;
 var letter_spacing = [];
 var letter_spacing_values = [];
 var counter_ls;
-var test;
+
 
 var color_picker;
 var color = "#0433FF";
