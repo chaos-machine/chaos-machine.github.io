@@ -24,7 +24,7 @@ var capitalization = "capitalization";
 var corner_radius, color;
 
 /*this is where the button is placed in html*/
-let container = document.querySelector('.col-md-10');
+let container = document.querySelector('#output-area');
 
 
 
@@ -33,7 +33,20 @@ $(document).ready(function () {
     $('[data-toggle="popover"]').popover();
 });
 
+$('#btn-expandable').click(function () {
+    $(this).css('transform', 'rotate(180deg)');
 
+    if ($(this).hasClass('fas fa-plus')) {
+        $(this).removeClass("fas fa-plus");
+        $(this).addClass("fas fa-minus");
+    }
+
+    else {
+        $(this).removeClass("fas fa-minus");
+        $(this).addClass("fas fa-plus");
+    }
+
+});
 
 color_picker.on('input', function () {
     initial_color = this.value;

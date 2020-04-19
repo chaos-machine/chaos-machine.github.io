@@ -3,6 +3,7 @@
 <head>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    <script src="https://kit.fontawesome.com/bb876be28f.js" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
     <meta charset="utf-8" />
     <title></title>
@@ -15,100 +16,106 @@
         <div class="row">
 
             <!-- Parameter area-->
-            <div class="col-md-2">
+            <div class="col-md-2 col-xs-4">
 
                 <!-- Shape parameters-->
                 <div class="cp">
-                    <p class="space-small prop-big-header">Shape</p>
-                    <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
-                        Link with href
-                    </a>
+                    <p class="space-small prop-big-header">Shape</p>                        
+                   
+                        <i id="btn-expandable" class="fas fa-plus btn-icon" data-toggle="collapse" data-target="#collapseExample"
+                           aria-expanded="false" aria-controls="collapseExample"></i>
                     <hr>
 
                     <div class="collapse" id="collapseExample">
-                            <p class="space-xsmall prop-header">Corner Radius</p>
-                            <div class="btn-group btn-group-toggle  space-default" data-toggle="buttons">
+                        <p class="space-xsmall prop-header">Corner Radius</p>
+                        <div class="btn-group btn-group-toggle  space-default" data-toggle="buttons">
 
-                                <label class="btn btn-sm btn-secondary active" id="sharp">
-                                    <input type="radio" name="options" autocomplete="off"> Sharp
-                                </label>
+                            <label class="btn btn-sm btn-secondary active" id="sharp">
+                                <input type="radio" name="options" autocomplete="off"> Sharp
+                            </label>
 
-                                <label class="btn btn-sm btn-secondary" id="soft">
-                                    <input type="radio" autocomplete="off"> Soft
-                                </label>
+                            <label class="btn btn-sm btn-secondary" id="soft">
+                                <input type="radio" autocomplete="off"> Soft
+                            </label>
 
-                                <label class="btn btn-sm btn-secondary" id="bubble">
-                                    <input type="radio" name="options" autocomplete="off"> Bubble
-                                </label>
-                            </div>
+                            <label class="btn btn-sm btn-secondary" id="bubble">
+                                <input type="radio" name="options" autocomplete="off"> Bubble
+                            </label>
+                        </div>
 
-                            <p class="space-xsmall prop-header">Padding horizontal</p>
-                            <p class="space-xsmall prop-info">The range is set for both left and right paddigns</p>
-                            <input type="email" class="form-control space-default form" id="padding_horizontal" aria-describedby="emailHelp" placeholder="min, max" inputmode="numeric">
+                        <p class="space-xsmall prop-header">Padding horizontal</p>
+                        <p class="space-xsmall prop-info">The range is set for both left and right paddigns</p>
+                        <input type="email" class="form-control space-default form" id="padding_horizontal" aria-describedby="emailHelp" placeholder="min, max" inputmode="numeric">
 
-                            <p class="space-xsmall prop-header">Padding vertical</p>
-                            <p class="space-xsmall prop-info">The range is set for both top and bottom paddigns</p>
-                            <input type="email" class="form-control form" id="padding_vertical" aria-describedby="emailHelp" placeholder="min,max" inputmode="numeric">
+                        <p class="space-xsmall prop-header">Padding vertical</p>
+                        <p class="space-xsmall prop-info">The range is set for both top and bottom paddigns</p>
+                        <input type="email" class="form-control form" id="padding_vertical" aria-describedby="emailHelp" placeholder="min,max" inputmode="numeric">
                     </div>
                 </div>
 
                         <!-- Type parameters-->
-                        <div class="cp">
-                            <p class="space-small prop-big-header">Type</p>
-                            <hr>
-                            <p class="space-xsmall prop-header">Text</p>
-                            <input type="email" class="form-control form space-default" id="button_text" aria-describedby="emailHelp" placeholder="your btn text">
+                <div class="cp">
+                    <p class="space-small prop-big-header">Type</p>
+
+                    <i id="btn-expandable" class="fas fa-plus btn-icon" data-toggle="collapse" data-target="#collapseExample"
+                       aria-expanded="false" aria-controls="collapseExample"></i>
+                    <hr>
+                    <p class="space-xsmall prop-header">Text</p>
+                    <input type="email" class="form-control form space-default" id="button_text" aria-describedby="emailHelp" placeholder="your btn text">
 
 
-                            <p class="space-xsmall prop-header">Typeface</p>
-                            <div class="dropdown space-default">
-                                <button class="btn btn-sm btn-secondary dropdown-toggle" type="button" style="padding-top:5px" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Dropdown button
-                                </button>
-                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                    <a class="dropdown-item" href="#">Action</a>
-                                    <a class="dropdown-item" href="#">Another action</a>
-                                    <a class="dropdown-item" href="#">Something else here</a>
-                                </div>
-                            </div>
-
-                            <p class="space-xsmall prop-header">Font Weight</p>
-                            <div class="dropdown space-default">
-                                <button class="btn btn-sm btn-secondary dropdown-toggle" type="button" style="padding-top:5px" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Dropdown button
-                                </button>
-                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                    <a class="dropdown-item" href="#">Action</a>
-                                    <a class="dropdown-item" href="#">Another action</a>
-                                    <a class="dropdown-item" href="#">Something else here</a>
-                                </div>
-                            </div>
-
-                            <p class="space-xsmall prop-header">Letter Spacing</p>
-                            <input type="email" class="form-control form space-default" id="letter_spacing" aria-describedby="emailHelp" placeholder="min,max" inputmode="numeric">
-
-
-                            <p class="space-xsmall prop-header">Capitalizations</p>
-                            <div class="btn-group btn-group-toggle" data-toggle="buttons">
-
-                                <label class="btn btn-sm btn-secondary active" id="title-caps">
-                                    <input type="radio" name="options" autocomplete="off"> Title Case
-                                </label>
-
-                                <label class="btn btn-sm btn-secondary" id="all-caps">
-                                    <input type="radio" autocomplete="off"> CAPS
-                                </label>
-
-                                <label class="btn btn-sm btn-secondary" id="no-caps">
-                                    <input type="radio" name="options" autocomplete="off"> None
-                                </label>
-                            </div>
+                    <p class="space-xsmall prop-header">Typeface</p>
+                    <div class="dropdown space-default">
+                        <button class="btn btn-sm btn-secondary dropdown-toggle" type="button" style="padding-top:5px" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Dropdown button
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <a class="dropdown-item" href="#">Something else here</a>
                         </div>
-                        <div class="cp">
-                            <p class="space-small prop-big-header">Colour</p>
+                    </div>
 
-                            <input id="picker" class="color-picker" type="color" value="#0433FF" />
+                    <p class="space-xsmall prop-header">Font Weight</p>
+                    <div class="dropdown space-default">
+                        <button class="btn btn-sm btn-secondary dropdown-toggle" type="button" style="padding-top:5px" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Dropdown button
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <a class="dropdown-item" href="#">Something else here</a>
                         </div>
+                    </div>
+
+                    <p class="space-xsmall prop-header">Letter Spacing</p>
+                    <input type="email" class="form-control form space-default" id="letter_spacing" aria-describedby="emailHelp" placeholder="min,max" inputmode="numeric">
+
+
+                    <p class="space-xsmall prop-header">Capitalizations</p>
+                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+
+                        <label class="btn btn-sm btn-secondary active" id="title-caps">
+                            <input type="radio" name="options" autocomplete="off"> Title Case
+                        </label>
+
+                        <label class="btn btn-sm btn-secondary" id="all-caps">
+                            <input type="radio" autocomplete="off"> CAPS
+                        </label>
+
+                        <label class="btn btn-sm btn-secondary" id="no-caps">
+                            <input type="radio" name="options" autocomplete="off"> None
+                        </label>
+                    </div>
+                </div>
+                <div class="cp">
+                    <p class="space-small prop-big-header">Colour</p>
+
+                    <i id="btn-expandable" class="fas fa-plus btn-icon" data-toggle="collapse" data-target="#collapseExample"
+                       aria-expanded="false" aria-controls="collapseExample"></i>
+                    <hr />
+                    <input id="picker" class="color-picker" type="color" value="#0433FF" />
+                </div>
 
 
                         <button type="submit" class="btn btn-primary space-default" onclick="generateDesigns()">Generate Designs</button><br>
@@ -116,15 +123,17 @@
                     </div>
 
                 <!-- Output area starts in here-->
-                <div class="col-md-10" style="background-color:beige">
+            <div class="col-md-10 col-xs-8">
 
-                    <h1 class="space-default">Output</h1>
+                <div id="output-area" class="cp">
+                    <p class="space-small prop-big-header">Output</p>
+                    <h />
 
                     <p class="space-default" id="output-text">Press a combiantion to see its properties</p>
 
                     <p class="space-default" id="total-no-text">Total number of things</p>
 
-
+                </div>
                 </div>
             </div>
 
