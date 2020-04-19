@@ -24,7 +24,7 @@ var capitalization = "capitalization";
 var corner_radius, color;
 
 /*this is where the button is placed in html*/
-let container = document.querySelector('.col-md-9');
+let container = document.querySelector('.col-md-10');
 
 
 
@@ -133,11 +133,32 @@ padding_vertical = document.getElementById('padding_vertical').addEventListener(
 
 
 
+var s;
+$('*', document.body).on('click', '.custom-paddings', function () {
 
+
+    s = '';
+    var o = getComputedStyle(this);
+    for (var i = 0; i < o.length; i++) {
+
+        if ((o[i] == 'padding-left' || o[i] == 'letter-spacing' || o[i] == 'padding-top') && (o.getPropertyValue(o[i]) != 0 || o.getPropertyValue(o[i]) != null))
+            s += o[i] + ':  ' + o.getPropertyValue(o[i]) + '\n';
+
+    }
+    console.log(s);
+    document.getElementById('output-text').innerHTML = s.split('\n').join('<br />');
+        
+});
+   
 
 function generateDesigns() {
    /// console.log("horizontal:" + padding_horizontal_values + "\n" + "vertical: " + padding_vertical_values
       ///  + "\n" + "letter spacing: " + letter_spacing_values);
+
+    let total_combinations;
+    total_combinations = letter_spacing_values.length * padding_horizontal_values.length * padding_vertical_values.length;
+    document.getElementById('total-no-text').innerHTML = total_combinations.toString() + ' combinations';
+
 
     for (var k = 0; k < letter_spacing_values.length; k++) {
         for (var i = 0; i < padding_horizontal_values.length; i++) {
@@ -156,7 +177,7 @@ function generateDesigns() {
 
                 new_button.id = "button";
 
-
+                   
 
                 new_button_text = document.createTextNode('Button');
                 new_button.appendChild(new_button_text);
@@ -169,33 +190,16 @@ function generateDesigns() {
 
 
 
-$('*', document.body).on('click','.custom-paddings', function () {
-    console.log(this.id);
 
 
-        var s = '';
-        var o = getComputedStyle(this);
-        for (var i = 0; i < o.length; i++) {
-            if (o[i] == 'padding-left' && (o.getPropertyValue(o[i]) != 0 || o.getPropertyValue(o[i]) != null) )
-                s += o[i] + ':' + o.getPropertyValue(o[i]) + ';';
-        }
-     console.log(s);
-    $('body').popover({
-            
-            selector: '.custom-paddings',
-            content: s,
-            title: "btn properties",
-            placement: 'bottom',
-            trigger: 'focus'
-        });
 
-    });
 
 
 
 function resetOutput() {
 
     $('.custom-paddings').remove();
+    document.getElementById('output-text').innerHTML = '';
 }
 
 
