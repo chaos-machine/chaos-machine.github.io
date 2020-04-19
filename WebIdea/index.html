@@ -4,22 +4,23 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="stylesheet.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
-
     <meta charset="utf-8" />
     <title></title>
 </head>
 <body>
 
 
+    <!-- Fluid means full screen-->
     <div class="container-fluid space-default">
         <div class="row">
 
+            <!-- Parameter area-->
             <div class="col-md-3" style="background-color:aliceblue">
                 <h1 class="space-default">Parameters</h1>
 
-
                 <p class="space-small">Capitalizations</p>
                 <div class="btn-group btn-group-toggle  space-default" data-toggle="buttons">
+
                     <label class="btn btn-sm btn-secondary active" id="title-caps">
                         <input type="radio" name="options" autocomplete="off"> Title Case
                     </label>
@@ -31,19 +32,15 @@
                     <label class="btn btn-sm btn-secondary" id="no-caps">
                         <input type="radio" name="options" autocomplete="off"> No Case
                     </label>
-                </div>
-                <br />
+                </div> <br />
+
                 <label for="exampleInputEmail1">Letter Spacing</label>
                 <input type="email" class="form-control form space-default" id="letter_spacing" aria-describedby="emailHelp" placeholder="min,max" inputmode="numeric">
 
-
-
                 <p class="space-small">Colours</p>
-                <input id="picker" class="space-default color-picker" type="color" value="#0433FF" />
+                <input id="picker" class="space-default color-picker" type="color" value="#0433FF" /><br />
 
-         
 
-                <br />
                 <label for="exampleInputEmail1">Padding horizontal</label>
                 <input type="email" class="form-control space-default form" id="padding_horizontal" aria-describedby="emailHelp" placeholder="min, max" inputmode="numeric">
 
@@ -51,30 +48,29 @@
                 <input type="email" class="form-control space-default form space-large" id="padding_vertical" aria-describedby="emailHelp" placeholder="min,max" inputmode="numeric">
 
 
-
-
-                <button type="submit" class="btn btn-primary space-default" onclick="generateDesigns()">Generate Designs</button>
-                <br>
+                <button type="submit" class="btn btn-primary space-default" onclick="generateDesigns()">Generate Designs</button><br>
                 <button type="button" class="btn btn-outline-secondary" onclick="resetOutput()">Delete Designs</button>
-
-
-
             </div>
+
+            <!-- Output area starts in here-->
             <div class="col-md-9" style="background-color:beige">
 
                 <h1 class="space-default">Output</h1>
 
+                <p class="space-default" id="output-text">Output</p>
+
 
             </div>
         </div>
+    </div>
 
 
 
 
 
-
-        <script src="index.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.js"></script>
+    <script src="index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 </html>
